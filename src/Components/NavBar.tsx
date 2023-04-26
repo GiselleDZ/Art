@@ -2,7 +2,6 @@ import {
   AppBar,
   Box,
   Button,
-  CssBaseline,
   Divider,
   Drawer,
   IconButton,
@@ -15,7 +14,6 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
-import Gifs from "./Gifs";
 import { Link } from "react-router-dom";
 
 interface Props {
@@ -38,7 +36,7 @@ const NavBar = ({ window }: Props) => {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
+      <Typography variant="h1" sx={{ my: 2 }}>
         G Z
       </Typography>
       <Divider />
@@ -58,9 +56,8 @@ const NavBar = ({ window }: Props) => {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: "flex" }}>
-      <CssBaseline />
-      <AppBar position="static">
+    <Box>
+      <AppBar>
         <Toolbar>
           <IconButton
             aria-label="Open drawer"
@@ -71,17 +68,19 @@ const NavBar = ({ window }: Props) => {
             <MenuIcon />
           </IconButton>
           <Typography
-            variant="h6"
+            variant="h1"
             component="div"
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
           >
-            G Z
+            Giselle Zatonyl
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
               <Link to={`/${item}`} key={item}>
                 <Button key={item} sx={{ color: "#fff" }}>
-                  {item}
+                  <Typography variant="h2" mr={2}>
+                    {item}
+                  </Typography>
                 </Button>
               </Link>
             ))}
