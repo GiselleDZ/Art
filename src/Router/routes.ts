@@ -1,6 +1,6 @@
 import { ReactComponentElement, ReactNode } from "react";
-import Gifs, { GifsProps } from "../Components/Gifs";
 import ErrorPage from "./ErrorPage";
+import GifGallery from "../Components/GifGallery";
 
 export type RouteType = {
   path: string;
@@ -11,7 +11,7 @@ export type RouteType = {
 const routes: RouteType[] = [
   {
     path: "/gifs",
-    element: Gifs as React.FC,
+    element: GifGallery as React.FC,
   },
   // {
   //   path: "/",

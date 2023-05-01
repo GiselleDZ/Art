@@ -1,50 +1,54 @@
-import {
-  AdvancedImage,
-  lazyload,
-  placeholder,
-  responsive,
-} from "@cloudinary/react";
+import { useState } from "react";
 import { Cloudinary } from "@cloudinary/url-gen";
 import { fill } from "@cloudinary/url-gen/actions/resize";
-import { Box, Typography } from "@mui/material";
+import { ImageListItem } from "@mui/material";
+import { AdvancedImage, lazyload, placeholder } from "@cloudinary/react";
+import { getPage } from "@cloudinary/url-gen/actions/extract";
 
 type GifImageProps = {
   image: {
     src: string;
     caption: string;
   };
-  loaded: boolean;
-  //   onImageLoad: Function;
+  setDisplayedImage: Function;
 };
 
-const GifImage = ({ image, loaded }: GifImageProps) => {
-  // TODO: test whether it is more efficient to instantiate Cloudinary once in the parent component instead
+const GifImage = ({ image, setDisplayedImage }: GifImageProps) => {
+  const [hoveredImage, setHoveredImage] = useState<boolean>(false);
 
   const cld = new Cloudinary({
     cloud: {
       cloudName: "delu9m4xu",
     },
-    // url: {
-    //   secureDistribution: "www.gisellezatonyl.com",
-    //   secure: true,
-    // },
   });
 
-  const myImage = cld.image(image.src);
-  const styledImage = myImage.resize(fill());
+  const formattedImg = cld.image(`${image.src}`);
+  const hoveredTransformations = formattedImg.resize(
+    fill().width(220).height(220)
+  );
 
   return (
-    <Box>
-      <Box sx={{ width: "100%", position: "relative" }}>
+    <ImageListItem
+      key={image.caption}
+      onClick={() => setDisplayedImage(image)}
+      onMouseEnter={() => setHoveredImage(true)}
+      onMouseLeave={() => setHoveredImage(false)}
+    >
+      {/* Perhaps lay the hovered image OVER the still so we don't get a flash? */}
+      {hoveredImage ? (
         <AdvancedImage
-          className="lazy"
-          cldImg={styledImage}
+          cldImg={hoveredTransformations}
           alt={image.caption}
-          plugins={[lazyload(), responsive(), placeholder()]}
+          plugins={[lazyload(), placeholder()]}
         />
-      </Box>
-      <Typography variant="caption">{image.caption}</Typography>
-    </Box>
+      ) : (
+        <AdvancedImage
+          cldImg={hoveredTransformations.extract(getPage().byNumber(2))}
+          alt={image.caption}
+          plugins={[lazyload(), placeholder()]}
+        />
+      )}
+    </ImageListItem>
   );
 };
 
