@@ -45,6 +45,14 @@ const createMyTheme = (prefersDarkMode) =>
           },
         },
       },
+      MuiToolbar: {
+        styleOverrides: {
+          root: {
+            display: "flex",
+            justifyContent: "space between",
+          },
+        },
+      },
       MuiAppBar: {
         styleOverrides: {
           root: {

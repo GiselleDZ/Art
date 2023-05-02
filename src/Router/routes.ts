@@ -1,6 +1,7 @@
 import { ReactComponentElement, ReactNode } from "react";
 import ErrorPage from "./ErrorPage";
 import GifGallery from "../Components/GifGallery";
+import Home from "../Components/Home";
 
 export type RouteType = {
   path: string;
@@ -13,11 +14,11 @@ const routes: RouteType[] = [
     path: "/gifs",
     element: GifGallery as React.FC,
   },
-  // {
-  //   path: "/",
-  // INDEX ROUTE - ADD INDEX TO <ROUTE>
-  //   element: <Gifs />,
-  // },
+  {
+    // INDEX ROUTE - ADD INDEX TO <ROUTE>
+    path: "/",
+    element: Home as React.FC,
+  },
   // {
   //     path: "/",
   //     // element: <Home />,

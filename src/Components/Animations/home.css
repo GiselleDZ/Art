@@ -1,0 +1,66 @@
+/* homeScreenAnimation.css */
+@keyframes zigzag {
+  0% {
+    transform: translateY(100vh) translateX(0) scale(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  20% {
+    transform: translateY(90vh) translateX(-2vw) scale(1);
+  }
+  30% {
+    transform: translateY(80vh) translateX(1vw) scale(2);
+  }
+  40% {
+    transform: translateY(70vh) translateX(-3vw) scale(2.8);
+  }
+  50% {
+    transform: translateY(60vh) translateX(2vw) scale(2.7);
+  }
+  60% {
+    transform: translateY(50vh) translateX(-1vw) scale(3.5);
+  }
+  70% {
+    transform: translateY(40vh) translateX(4vw) scale(3.2);
+  }
+  80% {
+    transform: translateY(30vh) translateX(-3vw) scale(2);
+  }
+  90% {
+    transform: translateY(20vh) translateX(2vw) scale(1);
+  }
+  100% {
+    transform: translateY(-10vh) translateX(0) scale(0);
+  }
+}
+
+.homeScreenWrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bg-primary);
+}
+
+.waterDrop {
+  position: absolute;
+  background-image: radial-gradient(
+      circle at 30% 30%,
+      rgba(255, 255, 255, 0.6),
+      transparent 50%
+    ),
+    radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.2), transparent 60%),
+    radial-gradient(
+      circle at 70% 30%,
+      rgba(255, 255, 255, 0.3),
+      transparent 80%
+    );
+  background-color: rgba(0, 0, 255, 0.3);
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  filter: blur(0.2px);
+  animation: zigzag 10s linear infinite;
+  transition: left 0.5s ease-in-out;
+}

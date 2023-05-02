@@ -67,23 +67,38 @@ const NavBar = ({ window }: Props) => {
           >
             <MenuIcon />
           </IconButton>
-          <Typography
-            variant="h1"
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
+          <Box
+            sx={{
+              display: { xs: "none", sm: "flex" },
+              justifyContent: { sm: "space-between" },
+              alignItems: { sm: "center" },
+              width: "100%",
+            }}
           >
-            Giselle Zatonyl
-          </Typography>
-          <Box sx={{ display: { xs: "none", sm: "block" } }}>
-            {navItems.map((item) => (
-              <Link to={`/${item}`} key={item}>
-                <Button key={item} sx={{ color: "#fff" }}>
-                  <Typography variant="h2" mr={2}>
-                    {item}
-                  </Typography>
-                </Button>
-              </Link>
-            ))}
+            <Link to="/">
+              <Button>
+                <Typography
+                  variant="h1"
+                  component="div"
+                  sx={{
+                    display: { xs: "none", sm: "block" },
+                  }}
+                >
+                  Giselle Zatonyl
+                </Typography>
+              </Button>
+            </Link>
+            <Box sx={{ display: { xs: "none", sm: "block" } }}>
+              {navItems.map((item) => (
+                <Link to={`/${item}`} key={item}>
+                  <Button key={item} sx={{ color: "#fff" }}>
+                    <Typography variant="h2" mr={2}>
+                      {item}
+                    </Typography>
+                  </Button>
+                </Link>
+              ))}
+            </Box>
           </Box>
         </Toolbar>
       </AppBar>
@@ -107,7 +122,7 @@ const NavBar = ({ window }: Props) => {
           {drawer}
         </Drawer>
       </Box>
-      <Box component="main"></Box>
+      {/* <Box component="main"></Box> */}
     </Box>
   );
 };

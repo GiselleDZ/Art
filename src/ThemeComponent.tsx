@@ -73,7 +73,6 @@ const ThemeComponent = ({ children }: ThemeComponentProps) => {
         sx={{
           backgroundColor: theme.palette.primary.main,
           height: "100%",
-          paddingY: "150px",
           "&::webkit-scrollbar": {
             width: "10px",
             backgroundColor: "#616283",
