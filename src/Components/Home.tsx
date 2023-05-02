@@ -7,27 +7,20 @@ type drop = {
   x: number;
   y: number;
   delay: number;
+  initialLeft: number;
 };
 
 type mousePositionType = {
   x: number;
-};
-
-type MovementFactor = {
-  x: number;
+  y: number;
 };
 
 const Home = () => {
   const [drops, setDrops] = useState<Array<drop>>([]);
-  const [movementFactors, setMovementFactors] = useState<MovementFactor[]>([]);
   const [mousePosition, setMousePosition] = useState<mousePositionType>({
     x: 0,
+    y: 0,
   });
-  const [prevMousePosition, setPrevMousePosition] = useState<mousePositionType>(
-    {
-      x: 0,
-    }
-  );
 
   useEffect(() => {
     generateDrops(100);
@@ -42,13 +35,8 @@ const Home = () => {
 
   useEffect(() => {
     const handleMouseMove = (event: MouseEvent) => {
-      const { clientX } = event;
-      const dx = Math.abs(clientX - mousePosition.x);
-
-      if (dx > 20) {
-        setPrevMousePosition({ ...mousePosition });
-        setMousePosition({ x: clientX });
-      }
+      const { clientX, clientY } = event;
+      setMousePosition({ x: clientX, y: clientY });
     };
 
     window.addEventListener("mousemove", handleMouseMove);
@@ -56,32 +44,30 @@ const Home = () => {
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
     };
-  }, [mousePosition]);
+  }, []);
 
   const generateDrops = (numDrops: number) => {
     const generatedDrops = [...drops];
-    const generatedMovementFactors = [...movementFactors];
     for (let i = 0; i < numDrops; i++) {
       const id = drops.length + i;
+      const xPercentage = Math.random() * 100;
+      const initialLeft = (xPercentage * window.innerWidth) / 100;
+
       generatedDrops.push({
         id,
         size: Math.random() * 4 + 4,
-        x: Math.random() * 100,
+        x: xPercentage,
         y: 0,
         delay: Math.random() * 4,
-      });
-
-      generatedMovementFactors.push({
-        x: Math.random() * 0.1 + 0.1,
+        initialLeft,
       });
     }
     setDrops(generatedDrops);
-    setMovementFactors(generatedMovementFactors);
   };
 
   useEffect(() => {
     const interval = setInterval(() => {
-      generateDrops(5);
+      generateDrops(1);
     }, 5000);
 
     return () => {
@@ -89,10 +75,30 @@ const Home = () => {
     };
   }, [drops]);
 
+  const calculateCurrentY = (drop: drop) => {
+    const duration = 10 + drop.delay;
+    const elapsedTime = (performance.now() / 1000 - drop.delay) % duration;
+    const progress = elapsedTime / duration;
+
+    return window.innerHeight * progress;
+  };
+
+  //   const calculateDeltaX = (drop: drop) => {
+  //     const currentY = calculateCurrentY(drop);
+  //     const distance = mousePosition.x - drop.x + mousePosition.y - currentY;
+  //     const radius = 100;
+
+  //     if (distance < radius) {
+  //       return (mousePosition.x - drop.initialLeft) / 10;
+  //     }
+  //     return 0;
+  //   };
+
   return (
     <div className="homeScreenWrapper">
       {drops.map((drop) => {
-        const deltaX = (mousePosition.x - prevMousePosition.x) / 4;
+        // const deltaX = calculateDeltaX(drop);
+        // console.log(drop.x, deltaX);
         return (
           <div
             key={drop.id}
@@ -100,8 +106,7 @@ const Home = () => {
             style={{
               width: drop.size,
               height: drop.size,
-
-              left: `calc(${drop.x}vw + ${deltaX}px)`,
+              left: `calc(${drop.x}vw - ${10}px)`,
               animationDelay: `${drop.delay}s`,
               animationDuration: `${10 + Math.random() * 10}s`,
             }}
