@@ -28,7 +28,14 @@ const NavBar = ({ window }: Props) => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const drawerWidth = 240;
-  const navItems = ["gifs", "videos", "installations", "stills", "about"];
+  const navItems = [
+    "gifs",
+    "sites",
+    "videos",
+    "installations",
+    "stills",
+    "about",
+  ];
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);

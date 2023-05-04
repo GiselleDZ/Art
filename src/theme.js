@@ -117,6 +117,23 @@ const createMyTheme = (prefersDarkMode) =>
           },
         },
       },
+      MuiCard: {
+        styleOverrides: {
+          root: {
+            display: "flex",
+            justifyContent: "center",
+            alignContent: "center",
+            alignItems: "center",
+            flexDirection: "column",
+            flexWrap: "wrap",
+            margin: "0 auto",
+            width: "200px",
+            height: "200px",
+            background: "rgb(97, 98, 131, 0.3)",
+            backgroundFilter: "blur(8px)",
+          },
+        },
+      },
     },
     mixins: {
       toolbar: {

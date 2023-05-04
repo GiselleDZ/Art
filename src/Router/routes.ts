@@ -2,6 +2,8 @@ import { ReactComponentElement, ReactNode } from "react";
 import ErrorPage from "./ErrorPage";
 import GifGallery from "../Components/GifGallery";
 import Home from "../Components/Home";
+import BubbleAnimation from "../Components/Animations/BubbleAnimation";
+import WebsitePieces from "../Components/WebsitePieces";
 
 export type RouteType = {
   path: string;
@@ -19,14 +21,18 @@ const routes: RouteType[] = [
     path: "/",
     element: Home as React.FC,
   },
+  {
+    path: "/sites",
+    element: WebsitePieces as React.FC,
+  },
+  {
+    path: "/sites/bubble",
+    element: BubbleAnimation as React.FC,
+  },
   // {
   //     path: "/",
   //     // element: <Home />,
   //     errorElement: <ErrorPage />,
-  //   },
-  //   {
-  //     path: "/about",
-  //     element: <About />,
   //   },
   //   {
   //     path: "/blog",
