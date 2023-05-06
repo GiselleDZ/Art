@@ -4,6 +4,7 @@ import { fill } from "@cloudinary/url-gen/actions/resize";
 import { ImageListItem } from "@mui/material";
 import { AdvancedImage, lazyload, placeholder } from "@cloudinary/react";
 import { getPage } from "@cloudinary/url-gen/actions/extract";
+import { useTheme } from "@emotion/react";
 
 type GifImageProps = {
   image: {
@@ -27,12 +28,21 @@ const GifImage = ({ image, setDisplayedImage }: GifImageProps) => {
     fill().width(220).height(220)
   );
 
+  const setHoveredImageValue = (e: React.MouseEvent, value: boolean) => {
+    e.preventDefault();
+    setHoveredImage(value);
+  };
+
   return (
     <ImageListItem
       key={image.caption}
       onClick={() => setDisplayedImage(image)}
-      onMouseEnter={() => setHoveredImage(true)}
-      onMouseLeave={() => setHoveredImage(false)}
+      onMouseEnter={(e) => setHoveredImageValue(e, true)}
+      onMouseLeave={(e) => setHoveredImageValue(e, false)}
+      // sx={{ transition: theme.transitions.create('background-image', {
+      //   duration: theme.transitions.duration.standard,
+      //   easing: theme.transitions.easing.easeInOut,
+      // }),}}
     >
       {/* Perhaps lay the hovered image OVER the still so we don't get a flash? */}
       {hoveredImage ? (

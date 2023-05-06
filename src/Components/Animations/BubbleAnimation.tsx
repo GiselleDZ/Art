@@ -33,12 +33,15 @@ const BubbleAnimation = () => {
   const generateDrops = (mouseX?: number) => {
     const numDrops = Math.random() * 100;
     const generatedDrops = [...drops];
+    function getRandomNumber(min: number, max: number) {
+      return Math.random() * (max - min) + min;
+    }
     for (let i = 0; i < numDrops; i++) {
       const dropDandom = Math.random();
       generatedDrops.push({
         id: dropDandom + i,
         size: dropDandom * 4 + 4,
-        x: mouseX || dropDandom * 100,
+        x: mouseX || getRandomNumber(0, window.innerWidth),
         y: 0,
         delay: dropDandom * 40,
         initialLeft: (dropDandom * 100 * window.innerWidth) / 100,
@@ -52,7 +55,7 @@ const BubbleAnimation = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       generateDrops();
-    }, 1000);
+    }, 5000);
 
     return () => {
       clearInterval(interval);
@@ -77,12 +80,14 @@ const BubbleAnimation = () => {
       onClick={() => generateDrops(mousePosition.x)}
     >
       {drops.map((drop) => {
-        const distanceToMouseX = mousePosition.x - drop.x;
+        const distanceToMouseX = Math.abs(mousePosition.x - drop.x);
         const moveLeftOrRight =
           window.innerWidth / 2 >= drop.x
-            ? distanceToMouseX - drop.x
-            : distanceToMouseX + drop.x;
-        const dropPosition = distanceToMouseX < 50 ? moveLeftOrRight : drop.x;
+            ? drop.x - distanceToMouseX
+            : drop.x + distanceToMouseX;
+
+        console.log(distanceToMouseX);
+        const dropPosition = distanceToMouseX < 200 ? moveLeftOrRight : drop.x;
         return (
           <div
             key={drop.id}
@@ -91,7 +96,7 @@ const BubbleAnimation = () => {
               width: drop.size,
               height: drop.size,
               left: `${dropPosition}vw`,
-              bottom: `${calculateCurrentY(drop)}vh`,
+              // bottom: `${calculateCurrentY(drop)}vh`,
               animationDelay: `${drop.delay}s`,
               animationDuration: `${drop.duration}s`,
             }}
