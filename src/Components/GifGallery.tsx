@@ -55,7 +55,7 @@ const GifGallery: React.FC = () => {
             cldImg={cld.image(displayedImage.src).resize(fill())}
             alt={displayedImage.caption}
             plugins={[lazyload(), placeholder()]}
-            style={{ maxHeight: "80vh" }}
+            style={{ maxHeight: "80vh", maxWidth: "80vw" }}
           />
           <Box my={3}>
             <Typography variant="h4">{displayedImage.caption}</Typography>

@@ -102,8 +102,10 @@ const createMyTheme = (prefersDarkMode) =>
             justifyContent: "center",
           },
           backdrop: {
-            background: "rgb(97, 98, 131, 0.1)",
-            backdropFilter: "blur(8px)",
+            background: prefersDarkMode
+              ? "rgb(14,17,22,0.8)"
+              : "rgb(209, 188, 227, 0.8)",
+            backdropFilter: "blur(10px)",
           },
         },
       },

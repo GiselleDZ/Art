@@ -68,7 +68,7 @@ export const gifImages = [
   },
   //GIFWRAPPING, LUMP OF COAL, 2014
   {
-    src: "Art-Site/gifwrapping-coal",
+    src: "Art-Site/gifwrapping-coal-2",
     caption: "A lump of goal, 2014",
   },
   // SENSUAL OBJECTS June 2015
