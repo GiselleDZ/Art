@@ -4,6 +4,7 @@ import GifGallery from "../Components/GifGallery";
 import Home from "../Components/Home";
 import BubbleAnimation from "../Components/Animations/BubbleAnimation";
 import WebsitePieces from "../Components/WebsitePieces";
+import About from "../Components/About";
 
 export type RouteType = {
   path: string;
@@ -34,10 +35,10 @@ const routes: RouteType[] = [
   //     // element: <Home />,
   //     errorElement: <ErrorPage />,
   //   },
-  //   {
-  //     path: "/blog",
-  //     element: <BlogPage />,
-  //   },
+  {
+    path: "/about",
+    element: About as React.FC,
+  },
 ];
 
 export default routes;
