@@ -1,0 +1,21 @@
+@keyframes turbulenceAnimation {
+  0%,
+  100% {
+    --baseFrequency: 0.51;
+  }
+  50% {
+    --baseFrequency: 3.03;
+  }
+}
+
+#turbulenceFilter feTurbulence {
+  animation: turbulenceAnimation 5s infinite;
+  basefrequency: var(--baseFrequency);
+}
+
+.cls-1 {
+  fill: #82caff;
+}
+.blob {
+  animation: swellAndShift 5s infinite;
+}

@@ -27,9 +27,9 @@ const GifGallery: React.FC = () => {
     <Box
       sx={{
         width: "100%",
-        height: "100vh",
+        height: "100%",
         margin: 0,
-        paddingTop: "12vh",
+        paddingY: "12vh",
       }}
     >
       <Modal

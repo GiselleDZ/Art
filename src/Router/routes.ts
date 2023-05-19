@@ -22,22 +22,37 @@ const routes: RouteType[] = [
     path: "/",
     element: Home as React.FC,
   },
+  // {
+  //   path: "/images",
+  //   element: WebsitePieces as React.FC,
+  // },
+  // {
+  //   path: "/video",
+  //   element: WebsitePieces as React.FC,
+  // },
+  // {
+  //   path: "/projects",
+  //   element: WebsitePieces as React.FC,
+  // },
+  // {
+  //   path: "/sites/bubble",
+  //   element: BubbleAnimation as React.FC,
+  // },
   {
-    path: "/sites",
-    element: WebsitePieces as React.FC,
-  },
-  {
-    path: "/sites/bubble",
-    element: BubbleAnimation as React.FC,
+    path: "/about",
+    element: About as React.FC,
   },
   // {
   //     path: "/",
   //     // element: <Home />,
   //     errorElement: <ErrorPage />,
   //   },
+];
+
+const installationsRoutes: RouteType[] = [
   {
-    path: "/about",
-    element: About as React.FC,
+    path: "/projects/conductivity",
+    element: WebsitePieces as React.FC,
   },
 ];
 

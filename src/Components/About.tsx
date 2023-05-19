@@ -1,8 +1,28 @@
-const About = () => {
-  const googleSheet =
-    "https://docs.google.com/spreadsheets/d/1VtVWsRZzUBXooVbEnqpWii3M8wMqr_nFUXp3yOKL8t8/edit?usp=sharing";
+import { Box, Typography, useTheme } from "@mui/material";
 
-  return <></>;
+import BlobbyHexagon from "./Animations/BlobbyHexagon";
+import aboutText from "../Helpers/aboutText";
+
+const About = () => {
+  const theme = useTheme();
+
+  return (
+    <Box
+      sx={{
+        width: "100%",
+        margin: 0,
+        padding: "15vh",
+        flexDirection: "column",
+        justifyContent: "center",
+      }}
+    >
+      {aboutText.map((par, i) => (
+        <Typography variant="body2" key={`About-Para-${i}`} mb={2}>
+          {par}
+        </Typography>
+      ))}
+    </Box>
+  );
 };
 
 export default About;

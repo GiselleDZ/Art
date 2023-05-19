@@ -15,6 +15,7 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import routes from "../Router/routes";
 
 interface Props {
   /**
@@ -28,14 +29,7 @@ const NavBar = ({ window }: Props) => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const drawerWidth = 240;
-  const navItems = [
-    "gifs",
-    "sites",
-    "videos",
-    "installations",
-    "stills",
-    "about",
-  ];
+  const navItems = routes.map((route) => route.path.slice(1));
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
