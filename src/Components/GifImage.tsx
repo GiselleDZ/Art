@@ -39,10 +39,6 @@ const GifImage = ({ image, setDisplayedImage }: GifImageProps) => {
       onClick={() => setDisplayedImage(image)}
       onMouseEnter={(e) => setHoveredImageValue(e, true)}
       onMouseLeave={(e) => setHoveredImageValue(e, false)}
-      // sx={{ transition: theme.transitions.create('background-image', {
-      //   duration: theme.transitions.duration.standard,
-      //   easing: theme.transitions.easing.easeInOut,
-      // }),}}
     >
       {/* Perhaps lay the hovered image OVER the still so we don't get a flash? */}
       {hoveredImage ? (

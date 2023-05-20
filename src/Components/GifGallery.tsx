@@ -6,6 +6,7 @@ import { Box, Typography } from "@mui/material";
 import { AdvancedImage, lazyload, placeholder } from "@cloudinary/react";
 import GifImage from "./GifImage";
 import { gifImages } from "../Images/Cloud/gifs";
+import { image } from "@cloudinary/url-gen/qualifiers/source";
 
 type ImageData = {
   src: string;
@@ -64,7 +65,11 @@ const GifGallery: React.FC = () => {
       </Modal>
       <ImageList>
         {gifImages.map((img) => (
-          <GifImage image={img} setDisplayedImage={setDisplayedImage} />
+          <GifImage
+            image={img}
+            key={img.src}
+            setDisplayedImage={setDisplayedImage}
+          />
         ))}
       </ImageList>
     </Box>

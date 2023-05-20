@@ -36,12 +36,34 @@ export const BorderBox = styled(Box)`
   align-items: center;
 `;
 
+export const BoxforThumbNails = styled(Box)`
+  width: 100vw;
+  height: 100vh;
+  padding: 40px;
+  display: flex;
+  align-items: flex-start;
+  align-content: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
+`;
+
 // A styled box component for arranging text and icon elements horizontally
 export const TextIconBox = styled(Box)`
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+`;
+
+export const PageBox = styled(Box)`
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-content: flex-start;
+  justify-content: flex-start;
+  position: relative;
 `;
 
 // A styled box component for centering its contents both horizontally and vertically

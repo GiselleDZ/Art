@@ -1,6 +1,7 @@
 import { Box, Button, Card, Typography } from "@mui/material";
 import BubbleAnimation from "./Animations/BubbleAnimation";
 import { Link } from "react-router-dom";
+import { BoxforThumbNails } from "./Styled/CustomBoxes";
 
 const WebsitePieces = () => {
   const sitesRouter = [
@@ -12,17 +13,7 @@ const WebsitePieces = () => {
     },
   ];
   return (
-    <Box
-      sx={{
-        width: "100vw",
-        height: "100vh",
-        padding: "40px",
-        display: "flex",
-        alignItems: "center",
-        alignContent: "center",
-        justifyContent: "center",
-      }}
-    >
+    <BoxforThumbNails>
       {sitesRouter.map((s) => (
         <Link to={`${window.location}${s.path}`} key={s.path}>
           <Button>
@@ -38,7 +29,7 @@ const WebsitePieces = () => {
           </Button>
         </Link>
       ))}
-    </Box>
+    </BoxforThumbNails>
   );
 };
 
