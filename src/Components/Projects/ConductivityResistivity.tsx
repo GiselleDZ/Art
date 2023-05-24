@@ -1,4 +1,4 @@
-import conductivityResistivityData from "../../Helpers/ProjectData/conductivityResistivity";
+import conductivityResistivityData from "./ProjectData/conductivityResistivity";
 import ProjectTemplate from "./ProjectTemplate";
 
 const ConductivityResistivity = () => {

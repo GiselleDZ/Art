@@ -9,7 +9,9 @@ import Projects from "../Components/Projects";
 import ConductivityResistivity from "../Components/Projects/ConductivityResistivity";
 import ModularLandscapes from "../Components/Projects/ModularLandscapes";
 import TheHarm from "../Components/Projects/The Harm";
-import conductivityResistivityData from "../Helpers/ProjectData/conductivityResistivity";
+import conductivityResistivityData from "../Components/Projects/ProjectData/conductivityResistivity";
+import modularLandscapesData from "../Components/Projects/ProjectData/modularLandscapes";
+import theHarmData from "../Components/Projects/ProjectData/theHarm";
 
 export type RouteType = {
   path: string;
@@ -31,10 +33,6 @@ const routes: RouteType[] = [
   },
   // {
   //   path: "/images",
-  //   element: WebsitePieces as React.FC,
-  // },
-  // {
-  //   path: "/video",
   //   element: WebsitePieces as React.FC,
   // },
   {
@@ -74,23 +72,19 @@ export const projectsRoutes: ProjectRouteType[] = [
   },
   {
     path: `/modularlandscapes`,
-    title: "Modular Landscapes",
-    description:
-      "A series of ship windows traveling to an array of landscapes.",
-    year: 2016,
+    title: modularLandscapesData.title,
+    description: modularLandscapesData.description,
+    year: modularLandscapesData.year,
     element: ModularLandscapes as React.FC,
-    image:
-      "https://res.cloudinary.com/delu9m4xu/image/upload/v1684540837/Art-Site/Modular-Landscapes/ggrphcllyindtrmntfntss-modulardoc-03_kvwl8l.jpg",
+    image: modularLandscapesData.coverImage,
   },
   {
     path: `/theharm`,
-    title: "The Harm Of Coming To Existence",
-    description:
-      "A music video for the song The Harm of Coming into Existence by ambient musician Richard Cruz.",
-    year: 2016,
+    title: theHarmData.title,
+    description: theHarmData.description,
+    year: theHarmData.year,
     element: TheHarm as React.FC,
-    image:
-      "https://res.cloudinary.com/delu9m4xu/image/upload/v1684541479/Art-Site/theHarm/theharm-still-05_zh4ceq.jpg",
+    image: theHarmData.coverImage,
   },
 ];
 
