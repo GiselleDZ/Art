@@ -31,13 +31,13 @@ const VimeoEmbed = ({ link }: VimeoEmbedProps) => {
   }, []);
 
   return (
-    <Box>
+    <Box mb={3}>
       {!!iframeSrc && (
         <iframe
           src={iframeSrc}
           allowFullScreen
           style={{
-            width: "100%",
+            width: width,
             height: width * 0.57,
             border: "none",
           }}
