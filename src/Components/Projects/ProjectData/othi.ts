@@ -1,12 +1,15 @@
-const alienShipData = {
-  title: "Alien Ship",
+const othiData = {
+  title: "Optimal health Technologies Institute",
   coverImage:
-    "https://res.cloudinary.com/delu9m4xu/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1684964506/Art-Site/AlienShip/alienship_09_03_15.jpg",
+    "https://res.cloudinary.com/delu9m4xu/image/upload/v1684965320/Art-Site/Othi/othi-10-05-14-still-07_jkguwl.jpg",
   description:
-    "A tongue in cheek self-portrait depicting an alien ship transporting away the artist as alien. The work was created as a short gif and an 20x30in aluminum image transfer.",
+    "A fictional video advertisement for a dystopian technology research company attempting to optimize humanity for productivity.",
   year: 2015,
-  projectPhotos: [],
-  installPhotos: [],
+  videoLink: "https://vimeo.com/gisellezatonyl/ohti?share=copy",
+  projectPhotos: [
+    "https://res.cloudinary.com/delu9m4xu/image/upload/v1684965320/Art-Site/Othi/othi-10-05-14-still-07_jkguwl.jpg",
+    "https://res.cloudinary.com/delu9m4xu/image/upload/v1684965323/Art-Site/Othi/screen_shot_2017-02-07_at_102654_pm-u9956-fr_wg4mye.png",
+  ],
 };
 
-export default alienShipData;
+export default othiData;

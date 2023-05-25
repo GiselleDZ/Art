@@ -1,7 +1,7 @@
 const dnsData = {
   title: "Dimensional Navigation Simulator",
   coverImage:
-    "https://res.cloudinary.com/delu9m4xu/image/upload/v1684965184/Art-Site/DNS/adns-sunset-render-11-14_0059_apqys9.jpg",
+    "https://res.cloudinary.com/delu9m4xu/image/upload/v1684965184/Art-Site/DNS/dns-sunset.jpg",
   description:
     "A fictional commercial for a dimensional navigation simulartor.",
   year: 2012,

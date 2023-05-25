@@ -1,12 +1,14 @@
-const alienShipData = {
+const refractionData = {
   title: "Alien Ship",
   coverImage:
-    "https://res.cloudinary.com/delu9m4xu/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1684964506/Art-Site/AlienShip/alienship_09_03_15.jpg",
+    "https://res.cloudinary.com/delu9m4xu/image/upload/v1684965332/Art-Site/Refraction/refraction-flyer-10-03-14-no-date_jv32ll.jpg",
   description:
-    "A tongue in cheek self-portrait depicting an alien ship transporting away the artist as alien. The work was created as a short gif and an 20x30in aluminum image transfer.",
+    "A compillation of video art curated by Giselle Zatonyl, for the closing event of their residency at Culture Hub in New York City.",
+  videoLink: "https://vimeo.com/107929842?share=copy",
   year: 2015,
-  projectPhotos: [],
-  installPhotos: [],
+  projectPhotos: [
+    "https://res.cloudinary.com/delu9m4xu/image/upload/v1684965332/Art-Site/Refraction/refraction-flyer-10-03-14-no-date_jv32ll.jpg",
+  ],
 };
 
-export default alienShipData;
+export default refractionData;

@@ -1,4 +1,4 @@
-const IcosaTotems = {
+const icosaTotemsData = {
   title: "Icosa Totems, Death Leaves Cans of Shaving Cream Half Used",
   coverImage:
     "https://res.cloudinary.com/delu9m4xu/image/upload/v1684964765/Art-Site/IcosaTotems/icosa-1.png",
@@ -12,4 +12,4 @@ const IcosaTotems = {
   ],
 };
 
-export default IcosaTotems;
+export default icosaTotemsData;

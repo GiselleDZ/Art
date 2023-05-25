@@ -1,7 +1,7 @@
 const discreteSystemsData = {
   title: "Discrete Systems",
   coverImage:
-    "https://res.cloudinary.com/delu9m4xu/image/upload/v1684964782/Art-Site/DiscreteSystems/discretesystems-inventory-06-26-14_0234-detail-u9974-fr_fev3qd.png",
+    "https://res.cloudinary.com/delu9m4xu/image/upload/v1684964783/Art-Site/DiscreteSystems/screen-shot-2014-05-23-at-102521-am-1024x524_roh08o.jpg",
   description: "Solo show at Transfer Gallery",
   year: 2013,
   projectPhotos: [

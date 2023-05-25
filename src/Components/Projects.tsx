@@ -1,7 +1,7 @@
 import { Box, Button, Card, Typography } from "@mui/material";
 import { BoxforThumbNails } from "./Styled/CustomBoxes";
 import { Link } from "react-router-dom";
-import { projectsRoutes } from "../Router/routes";
+import { projectsRoutes } from "../Images/Router/routes";
 
 const Projects = () => {
   return (
@@ -13,7 +13,7 @@ const Projects = () => {
               sx={{
                 width: "200px",
                 textOverflow: "wrap",
-                margin: "0 20px 60px 0",
+                margin: "0 20px 20px 0",
               }}
             >
               <Card
@@ -23,12 +23,10 @@ const Projects = () => {
                   marginBottom: "20px",
                 }}
               />
-              <Typography variant="h3" mb={2}>
-                {r.title}
-              </Typography>
-              <Typography variant="body1" sx={{ lineHeight: "150%" }}>
+              <Typography variant="h3">{r.title}</Typography>
+              {/* <Typography variant="body1" sx={{ lineHeight: "150%" }}>
                 {r.description}
-              </Typography>
+              </Typography> */}
             </Box>
           </Button>
         </Link>

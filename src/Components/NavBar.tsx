@@ -15,7 +15,7 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import routes from "../Router/routes";
+import routes from "../Images/Router/routes";
 
 interface Props {
   /**

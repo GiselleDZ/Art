@@ -1,5 +1,5 @@
-import conductivityResistivityData from "./ProjectData/conductivityResistivity";
-import ProjectTemplate from "./ProjectTemplate";
+import conductivityResistivityData from "../ProjectData/conductivityResistivity";
+import ProjectTemplate from "../ProjectTemplate";
 
 const ConductivityResistivity = () => {
   return (
