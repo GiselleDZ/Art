@@ -6,7 +6,7 @@ import { BoxforThumbNails } from "./Styled/CustomBoxes";
 const WebsitePieces = () => {
   const sitesRouter = [
     {
-      path: "/bubble",
+      path: "bubble",
       description: "CSS animation",
       year: 2023,
       element: BubbleAnimation as React.FC,

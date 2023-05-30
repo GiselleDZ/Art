@@ -1,11 +1,14 @@
-const intangibilityData = {
+import { projectDataType } from ".";
+
+const intangibilityData: projectDataType = {
+  path: "intangibility",
   title: "Icosa Totems, Death Leaves Cans of Shaving Cream Half Used",
   coverImage:
     "https://res.cloudinary.com/delu9m4xu/image/upload/v1684965232/Art-Site/Intangibility/_mg_8732-fixed_x3kxdo.jpg",
   description:
     "A collaboration between Lauren Pascarella and Giselle Zatonyl. Installed at the Freedom Tower in Miami.",
   year: 2014,
-  installPhotos: [
+  projectPhotos: [
     "https://res.cloudinary.com/delu9m4xu/image/upload/v1684965232/Art-Site/Intangibility/_mg_8732-fixed_x3kxdo.jpg",
     "https://res.cloudinary.com/delu9m4xu/image/upload/v1684965232/Art-Site/Intangibility/_mg_8722-fixed_jhm9pi.jpg",
     "https://res.cloudinary.com/delu9m4xu/image/upload/v1684965233/Art-Site/Intangibility/_mg_8732-fixed3-u9995-fr_lcdgvp.png",

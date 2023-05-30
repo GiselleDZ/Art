@@ -1,13 +1,13 @@
 import { Box, Button, Card, Typography } from "@mui/material";
 import { BoxforThumbNails } from "./Styled/CustomBoxes";
 import { Link } from "react-router-dom";
-import { projectsRoutes } from "../Images/Router/routes";
+import projectsData from "./Projects/ProjectData";
 
 const Projects = () => {
   return (
     <BoxforThumbNails sx={{ paddingY: "12vh" }}>
-      {projectsRoutes.map((r) => (
-        <Link to={`${window.location}${r.path}`} key={r.path}>
+      {projectsData.map((r) => (
+        <Link to={`${window.location}/${r.path}`} key={r.path}>
           <Button>
             <Box
               sx={{
@@ -18,15 +18,12 @@ const Projects = () => {
             >
               <Card
                 sx={{
-                  backgroundImage: `url(${r.image})`,
+                  backgroundImage: `url(${r.coverImage})`,
                   backgroundSize: "cover",
                   marginBottom: "20px",
                 }}
               />
               <Typography variant="h3">{r.title}</Typography>
-              {/* <Typography variant="body1" sx={{ lineHeight: "150%" }}>
-                {r.description}
-              </Typography> */}
             </Box>
           </Button>
         </Link>

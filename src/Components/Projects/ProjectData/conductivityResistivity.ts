@@ -1,10 +1,13 @@
-const conductivityResistivityData = {
+import { projectDataType } from ".";
+
+const conductivityResistivityData: projectDataType = {
+  path: "conductivityresistivity",
   title: "Conductivity Resistivity",
   coverImage:
     "https://res.cloudinary.com/delu9m4xu/image/upload/v1684452591/conductivity-resistivity/ConductivityResistivity.png",
   description: "A 3D Art Museum featuring 3D art, right in in your broswer.",
   year: 2013,
-  projectLink: "https://conductivityresistivity.art",
+  link: "https://conductivityresistivity.art",
   projectPhotos: [
     "https://res.cloudinary.com/delu9m4xu/image/upload/v1684964411/Art-Site/the-wrong/stills/museum-outside.jpg",
     "https://res.cloudinary.com/delu9m4xu/image/upload/v1684964410/Art-Site/the-wrong/stills/museum-outside-2.jpg",

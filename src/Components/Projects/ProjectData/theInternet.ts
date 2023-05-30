@@ -1,4 +1,7 @@
-const theInternetData = {
+import { projectDataType } from ".";
+
+const theInternetData: projectDataType = {
+  path: "theinternet",
   title: "The Internet",
   coverImage:
     "https://res.cloudinary.com/delu9m4xu/image/upload/v1684965390/Art-Site/TheInternet/-get_-put-7-fixed_b9h0pc.jpg",

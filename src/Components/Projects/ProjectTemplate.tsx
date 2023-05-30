@@ -1,31 +1,19 @@
 import { Box, Button, Typography } from "@mui/material";
 import { PageBox } from "../Styled/CustomBoxes";
-import { Link } from "react-router-dom";
 import VimeoEmbed from "../../Helpers/VimeoEmbbed";
+import { projectDataType } from "./ProjectData";
 
 type ProjectTemplateProps = {
-  title: string;
-  cover: string;
-  description?: string;
-  projectLink?: string;
-  videoLink?: string[];
-  children?: React.FC;
+  project: projectDataType;
 };
 
-const ProjectTemplate = ({
-  title,
-  cover,
-  description,
-  projectLink,
-  videoLink,
-  children,
-}: ProjectTemplateProps) => {
+const ProjectTemplate = ({ project }: ProjectTemplateProps) => {
   return (
     <PageBox sx={{ paddingY: 0, alignItems: "center" }}>
       <>
         <Box
           sx={{
-            backgroundImage: `url(${cover})`,
+            backgroundImage: `url(${project.coverImage})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             width: "100vw",
@@ -34,32 +22,33 @@ const ProjectTemplate = ({
         />
         <Box sx={{ padding: "40px", textAlign: "center" }}>
           <Button
-            onClick={() => !!projectLink && window.open(projectLink, "_blank")}
+            onClick={() =>
+              !!project.link && window.open(project.link, "_blank")
+            }
           >
             <Typography variant="h1" mb={3}>
-              {title}
+              {project.title}
             </Typography>
           </Button>
           <Typography variant="body1" mb={3} sx={{ lineHeight: "150%" }}>
-            {!!description && description}
+            {project.description}
           </Typography>
-          {!!projectLink && (
-            <Button onClick={() => window.open(projectLink, "_blank")}>
+          {!!project.link && (
+            <Button onClick={() => window.open(project.link, "_blank")}>
               <Typography variant="h5">View Project</Typography>
             </Button>
           )}
-          {!!videoLink && (
+          {!!project.videos && (
             <Box sx={{ position: "relative" }}>
-              {videoLink.map((link) =>
-                link.includes("vimeo") ? (
-                  <VimeoEmbed link={link} key={link} />
+              {project.videos.map((video) =>
+                video.includes("vimeo") ? (
+                  <VimeoEmbed link={video} key={video} />
                 ) : null
               )}
             </Box>
           )}
           {/* image gallery */}
         </Box>
-        {!!children && children}
       </>
     </PageBox>
   );

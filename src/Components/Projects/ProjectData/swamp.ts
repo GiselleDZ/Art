@@ -1,4 +1,7 @@
-const swampData = {
+import { projectDataType } from ".";
+
+const swampData: projectDataType = {
+  path: "swampspiritswarm",
   title: "Swamp Spirit Swarm",
   coverImage:
     "https://res.cloudinary.com/delu9m4xu/image/upload/v1684965345/Art-Site/Swamp/swampSpiritSwarm-01.jpg",

@@ -1,4 +1,7 @@
-const modularLandscapesData = {
+import { projectDataType } from ".";
+
+const modularLandscapesData: projectDataType = {
+  path: "modularlandscapes",
   title: "Modular Landscapes",
   coverImage:
     "https://res.cloudinary.com/delu9m4xu/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1684964341/Art-Site/Modular-Landscapes/12028687_10208018435278202_8949771425615476840_o-u9305-fr_tczhlv.png",

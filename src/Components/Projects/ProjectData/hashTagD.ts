@@ -1,4 +1,7 @@
-const hashTagDData = {
+import { projectDataType } from ".";
+
+const hashTagDData: projectDataType = {
+  path: "hashtagD",
   title: "Dimensional Navigation Simulator",
   coverImage:
     "https://res.cloudinary.com/delu9m4xu/image/upload/v1684964489/Art-Site/HashtagD/hshtagd-inivte-1.jpg",
