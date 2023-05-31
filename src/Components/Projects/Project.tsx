@@ -1,17 +1,13 @@
-import { useLocation, useMatch, useParams } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 import projectsData, { projectDataType } from "./ProjectData";
 import ProjectTemplate from "./ProjectTemplate";
 import { Typography } from "@mui/material";
 
-const Project = () => {
-  const { id } = useParams();
+type ProjectProps = {
+  project: projectDataType;
+};
 
-  const project = projectsData.find(
-    (project: projectDataType) => project.path === id
-  );
-
-  if (!project) return <Typography>This project doesn't exist</Typography>;
-
+const Project = ({ project }: ProjectProps) => {
   return <ProjectTemplate project={project} />;
 };
 
