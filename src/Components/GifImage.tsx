@@ -4,7 +4,6 @@ import { fill } from "@cloudinary/url-gen/actions/resize";
 import { ImageListItem } from "@mui/material";
 import { AdvancedImage, lazyload, placeholder } from "@cloudinary/react";
 import { getPage } from "@cloudinary/url-gen/actions/extract";
-import { useTheme } from "@emotion/react";
 
 type GifImageProps = {
   image: {

@@ -1,11 +1,9 @@
-import { Box, Typography, useTheme } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
 import BlobbyHexagon from "./Animations/BlobbyHexagon";
 import aboutText from "../Helpers/aboutText";
 
 const About = () => {
-  const theme = useTheme();
-
   return (
     <Box
       sx={{

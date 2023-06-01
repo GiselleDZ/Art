@@ -15,7 +15,7 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import routes from "../Images/Router/routes";
+import routes from "../Router/routes";
 
 interface Props {
   /**
@@ -76,28 +76,30 @@ const NavBar = ({ window }: Props) => {
               width: "100%",
             }}
           >
-            <Link to="/">
-              <Button>
-                <Typography
-                  variant="h1"
-                  component="div"
-                  sx={{
-                    display: { xs: "none", sm: "block" },
-                  }}
-                >
-                  Giselle Zatonyl
-                </Typography>
-              </Button>
-            </Link>
+            {/* <Link to="/"> */}
+            <Button>
+              <Typography
+                variant="h1"
+                component="div"
+                sx={{
+                  display: { xs: "none", sm: "block" },
+                }}
+              >
+                Giselle Zatonyl
+              </Typography>
+            </Button>
+            {/* </Link> */}
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
               {navItems.map((item) => (
-                <Link to={`/${item}`} key={item}>
+                // <Link to={`/${item}`} key={item}>
+                <a href={`/${item}`} key={item}>
                   <Button key={item} sx={{ color: "#fff" }}>
                     <Typography variant="h2" mr={2}>
                       {item}
                     </Typography>
                   </Button>
-                </Link>
+                </a>
+                // </Link>
               ))}
             </Box>
           </Box>

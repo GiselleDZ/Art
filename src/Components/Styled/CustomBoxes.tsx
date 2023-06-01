@@ -1,6 +1,6 @@
 // This file exports various styled boxes and additional styles for boxes that are used in the other components throughout the application. The styled boxes include *BorderBox*, *TextIconBox*, *CenterBox*, *StartBox*, and *LineDivider*. There are also two style objects, *idBoxStyle* and *nameBoxStyle*, which are used to style specific elements in the NFT component.
 
-import { Divider, Box } from "@mui/material";
+import { Box } from "@mui/material";
 import { styled } from "@mui/system";
 
 // The style for the ID box in the NFT component
@@ -25,16 +25,6 @@ export const nameBoxStyle = {
   justifyContent: "flex-start",
   padding: "16px",
 };
-
-// A styled box component that displays a border and positions its contents in the center
-export const BorderBox = styled(Box)`
-  background: ${({ theme }) => theme.palette.bg[70]};
-  border: 1px solid ${({ theme }) => theme.palette.fg[50]};
-  border-radius: 4px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
 
 export const BoxforThumbNails = styled(Box)`
   width: 100vw;
@@ -79,14 +69,4 @@ export const StartBox = styled(Box)`
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-`;
-
-// A styled divider component with custom width and color
-export const LineDivider = styled(Divider)`
-  width: 100%;
-  border-width: 1px 0 0 0;
-  border-style: solid;
-  border-color: ${({ theme }) => theme.palette.fg[25]};
-  margin-top: 24px;
-  margin-bottom: 40px;
 `;

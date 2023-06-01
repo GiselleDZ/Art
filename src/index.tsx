@@ -2,8 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
+import ThemeComponent from "./ThemeComponent";
+import MainRouter from "./Router/MainRouter";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -11,9 +13,10 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <ThemeComponent>
+      <RouterProvider router={MainRouter} />
       <App />
-    </BrowserRouter>
+    </ThemeComponent>
   </React.StrictMode>
 );
 

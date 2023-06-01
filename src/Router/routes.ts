@@ -1,11 +1,11 @@
 import { ReactComponentElement, ReactNode } from "react";
 import ErrorPage from "./ErrorPage";
-import GifGallery from "../../Components/GifGallery";
-import Home from "../../Components/Home";
-import BubbleAnimation from "../../Components/Animations/BubbleAnimation";
-import WebsitePieces from "../../Components/WebsitePieces";
-import About from "../../Components/About";
-import Projects from "../../Components/Projects";
+import GifGallery from "../Components/GifGallery";
+import Home from "../Components/Home";
+import BubbleAnimation from "../Components/Animations/BubbleAnimation";
+import WebsitePieces from "../Components/WebsitePieces";
+import About from "../Components/About";
+import Projects from "../Components/Projects";
 
 export type RouteType = {
   path: string;
