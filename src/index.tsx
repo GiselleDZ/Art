@@ -1,8 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter, RouterProvider } from "react-router-dom";
+import { RouterProvider } from "react-router-dom";
 import "./index.css";
 import ThemeComponent from "./ThemeComponent";
 import MainRouter from "./Router/MainRouter";
@@ -15,7 +14,6 @@ root.render(
   <React.StrictMode>
     <ThemeComponent>
       <RouterProvider router={MainRouter} />
-      <App />
     </ThemeComponent>
   </React.StrictMode>
 );

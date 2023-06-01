@@ -11,13 +11,14 @@ import {
   ListItemText,
   Toolbar,
   Typography,
+  useTheme,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, RouteObject } from "react-router-dom";
 import routes from "../Router/routes";
 
-interface Props {
+interface NavBarProps {
   /**
    * Injected by the documentation to work in an iframe.
    * You won't need it on your project.
@@ -25,28 +26,49 @@ interface Props {
   window?: () => Window;
 }
 
-const NavBar = ({ window }: Props) => {
+const NavBar = ({ window }: NavBarProps) => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
+  const theme = useTheme();
+
   const drawerWidth = 240;
-  const navItems = routes.map((route) => route.path.slice(1));
+  const navItems = routes.map(
+    (route: RouteObject) => route.path?.slice(1) || ""
+  );
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
+    <Box
+      onClick={handleDrawerToggle}
+      sx={{
+        textAlign: "center",
+        width: "100%",
+        textDecoration: "none",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+      }}
+    >
       <Typography variant="h1" sx={{ my: 2 }}>
         G Z
       </Typography>
       <Divider />
       <List>
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item} />
-            </ListItemButton>
+          <ListItem key={item}>
+            <Link to={`${item}`} key={item}>
+              <Button
+                sx={{
+                  textAlign: "center",
+                  color: "#fff",
+                }}
+              >
+                <Typography variant="h2">{item}</Typography>
+              </Button>
+            </Link>
           </ListItem>
         ))}
       </List>
@@ -76,30 +98,28 @@ const NavBar = ({ window }: Props) => {
               width: "100%",
             }}
           >
-            {/* <Link to="/"> */}
-            <Button>
-              <Typography
-                variant="h1"
-                component="div"
-                sx={{
-                  display: { xs: "none", sm: "block" },
-                }}
-              >
-                Giselle Zatonyl
-              </Typography>
-            </Button>
-            {/* </Link> */}
+            <Link to="/home">
+              <Button>
+                <Typography
+                  variant="h1"
+                  component="div"
+                  sx={{
+                    display: { xs: "none", sm: "block" },
+                  }}
+                >
+                  Giselle Zatonyl
+                </Typography>
+              </Button>
+            </Link>
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
               {navItems.map((item) => (
-                // <Link to={`/${item}`} key={item}>
-                <a href={`/${item}`} key={item}>
-                  <Button key={item} sx={{ color: "#fff" }}>
+                <Link to={`/${item}`} key={item}>
+                  <Button sx={{ color: "#fff" }}>
                     <Typography variant="h2" mr={2}>
                       {item}
                     </Typography>
                   </Button>
-                </a>
-                // </Link>
+                </Link>
               ))}
             </Box>
           </Box>
@@ -119,13 +139,14 @@ const NavBar = ({ window }: Props) => {
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: drawerWidth,
+              backgroundColor:
+                theme.palette.mode === "dark" ? "#0E1116" : "#D1BCE3",
             },
           }}
         >
           {drawer}
         </Drawer>
       </Box>
-      {/* <Box component="main"></Box> */}
     </Box>
   );
 };

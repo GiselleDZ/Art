@@ -8,7 +8,6 @@ function ErrorBoundary() {
   const theme = useTheme();
 
   const isRouterError = isRouteErrorResponse(error);
-  //   console.error(error);
 
   const isDarkMode = theme.palette.mode === "dark";
 
