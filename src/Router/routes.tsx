@@ -18,6 +18,10 @@ export const projectRoutes = projectsData.map((project) => ({
 
 const routes: RouteObject[] = [
   {
+    path: "/",
+    element: <Home />,
+  },
+  {
     path: "/gifs",
     element: <GifGallery />,
   },

@@ -1,23 +1,39 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button, Divider, Typography } from "@mui/material";
 import { PageBox } from "../Styled/CustomBoxes";
 import VimeoEmbed from "../../Helpers/VimeoEmbbed";
 import { projectDataType } from "./ProjectData";
+import ThumbnailGallery from "../Styled/ThumbnailGallery";
 
 type ProjectTemplateProps = {
   project: projectDataType;
 };
 
 const ProjectTemplate = ({ project }: ProjectTemplateProps) => {
+  const projectImgs =
+    project.projectPhotos?.map((p) => ({
+      src: p,
+      caption: project.description,
+    })) || null;
+
+  const installImgs =
+    project.installPhotos?.map((p) => ({
+      src: p,
+      caption: project.description,
+    })) || null;
+
   return (
-    <PageBox sx={{ paddingY: 0, alignItems: "center" }}>
+    <PageBox
+      sx={{ paddingY: { xs: "58px", sm: "65px" }, alignItems: "center" }}
+    >
       <>
         <Box
+          component="img"
+          src={project.coverImage}
           sx={{
-            backgroundImage: `url(${project.coverImage})`,
-            backgroundSize: "cover",
+            objectFit: "cover",
             backgroundPosition: "center",
             width: "100vw",
-            height: "50vh",
+            height: { xs: "200px", sm: "400px", md: "600px" },
           }}
         />
         <Box sx={{ padding: "40px", textAlign: "center" }}>
@@ -47,7 +63,21 @@ const ProjectTemplate = ({ project }: ProjectTemplateProps) => {
               )}
             </Box>
           )}
-          {/* image gallery */}
+
+          {!!projectImgs && (
+            <Box sx={{ marginY: "30px" }}>
+              <Typography variant="h4">Project Images</Typography>
+              <ThumbnailGallery images={projectImgs} />
+              <Divider />
+            </Box>
+          )}
+
+          {!!installImgs && (
+            <Box sx={{ marginY: "30px" }}>
+              <Typography variant="h4">Installation Images</Typography>
+              <ThumbnailGallery images={installImgs} />
+            </Box>
+          )}
         </Box>
       </>
     </PageBox>

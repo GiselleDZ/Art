@@ -5,7 +5,6 @@ import {
   createBrowserRouter,
 } from "react-router-dom";
 import routes, { projectRoutes } from "./routes";
-import ErrorBoundary from "../Components/ErrorPage";
 import NavBar from "../Components/NavBar";
 
 interface LayoutProps {
