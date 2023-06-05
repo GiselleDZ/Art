@@ -11,6 +11,7 @@ const GifGallery: React.FC = () => {
         height: "100%",
         margin: 0,
         paddingY: "12vh",
+        paddingX: { xs: "30px", sm: "40px" },
       }}
     >
       <ThumbnailGallery images={gifImages} />;

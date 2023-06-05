@@ -1,11 +1,11 @@
 import { Box, Typography } from "@mui/material";
 
-import BlobbyHexagon from "./Animations/BlobbyHexagon";
 import aboutText from "../Helpers/aboutText";
+import { PageBox } from "./Styled/CustomBoxes";
 
 const About = () => {
   return (
-    <Box
+    <PageBox
       sx={{
         width: "100%",
         margin: 0,
@@ -14,12 +14,14 @@ const About = () => {
         justifyContent: "center",
       }}
     >
-      {aboutText.map((par, i) => (
-        <Typography variant="body2" key={`About-Para-${i}`} mb={2}>
-          {par}
-        </Typography>
-      ))}
-    </Box>
+      <Box sx={{ height: { xs: "100%", sm: "100vh" } }}>
+        {aboutText.map((par, i) => (
+          <Typography variant="body2" key={`About-Para-${i}`} mb={2}>
+            {par}
+          </Typography>
+        ))}
+      </Box>
+    </PageBox>
   );
 };
 

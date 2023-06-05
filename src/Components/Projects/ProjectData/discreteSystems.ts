@@ -12,12 +12,11 @@ const discreteSystemsData: projectDataType = {
     "https://vimeo.com/manage/videos/110845833",
   ],
   projectPhotos: [
-    "https://res.cloudinary.com/delu9m4xu/image/upload/v1684965554/Art-Site/DiscreteSystems/discretesystems-ringblob-grid-full90f-05-29-14_ulxffs.gif",
-    "https://res.cloudinary.com/delu9m4xu/image/upload/v1684970937/Art-Site/DiscreteSystems/mirrorblob-ingrid-05-08-14_lhu4kg.gif",
-    "https://res.cloudinary.com/delu9m4xu/image/upload/v1684965524/Art-Site/DiscreteSystems/spherification-helixfunnel-lilacjune-06-28-14_j1ezmm.gif",
-    "https://res.cloudinary.com/delu9m4xu/image/upload/v1684965524/Art-Site/DiscreteSystems/spherification-helixfunnel-lilacjune-06-28-14_j1ezmm.gif",
-    "https://res.cloudinary.com/delu9m4xu/image/upload/v1684966293/Art-Site/DiscreteSystems/discretesystems-glitchblob-06-28-14-lg_x5x1x3.gif",
-    "https://res.cloudinary.com/delu9m4xu/image/upload/v1684965540/Art-Site/DiscreteSystems/discretesystems-glitchedsketch-06-28-14_cycuyy.gif",
+    "Art-Site/DiscreteSystems/discretesystems-ringblob-grid-full90f-05-29-14_ulxffs.gif",
+    "Art-Site/DiscreteSystems/mirrorblob-ingrid-05-08-14_lhu4kg.gif",
+    "Art-Site/DiscreteSystems/spherification-helixfunnel-lilacjune-06-28-14_j1ezmm.gif",
+    "Art-Site/DiscreteSystems/discretesystems-glitchblob-06-28-14-lg_x5x1x3.gif",
+    "Art-Site/DiscreteSystems/discretesystems-glitchedsketch-06-28-14_cycuyy.gif",
   ],
   installPhotos: [
     "https://res.cloudinary.com/delu9m4xu/image/upload/v1684964876/Art-Site/DiscreteSystems/DiscreteSystems-Still-01_nbgrk8.png",

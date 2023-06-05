@@ -50,7 +50,7 @@ const ThumbnailGallery = ({ images, componentCaption }: GalleryProps) => {
             },
           }}
         >
-          {isGifGallery ? (
+          {displayedImage?.src.includes("gif") ? (
             <AdvancedImage
               cldImg={cld.image(displayedImage.src).resize(fill())}
               alt={displayedImage.caption}
@@ -60,20 +60,24 @@ const ThumbnailGallery = ({ images, componentCaption }: GalleryProps) => {
           ) : (
             <Box
               component="img"
+              loading="lazy"
               src={displayedImage.src}
               alt={displayedImage.caption}
               sx={{ maxHeight: "90vh", maxWidth: "90vw" }}
             />
           )}
           <Box m={6}>
-            <Typography variant="body1">{displayedImage.caption}</Typography>
+            {isGifGallery && (
+              <Typography variant="body2">{displayedImage.caption}</Typography>
+            )}
+            <Typography variant="subtitle1">Click anywhere to exit</Typography>
           </Box>
         </Box>
       </Modal>
       <ImageList>
         {images.map((img, i) => (
           <>
-            {isGifGallery ? (
+            {img.src.includes("gif") ? (
               <GifImage
                 image={img}
                 key={img.src}

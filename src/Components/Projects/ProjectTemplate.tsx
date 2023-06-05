@@ -1,4 +1,4 @@
-import { Box, Button, Divider, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import { PageBox } from "../Styled/CustomBoxes";
 import VimeoEmbed from "../../Helpers/VimeoEmbbed";
 import { projectDataType } from "./ProjectData";
@@ -23,7 +23,10 @@ const ProjectTemplate = ({ project }: ProjectTemplateProps) => {
 
   return (
     <PageBox
-      sx={{ paddingY: { xs: "58px", sm: "65px" }, alignItems: "center" }}
+      sx={{
+        paddingY: { xs: "58px", sm: "65px" },
+        alignItems: "center",
+      }}
     >
       <>
         <Box
@@ -32,7 +35,7 @@ const ProjectTemplate = ({ project }: ProjectTemplateProps) => {
           sx={{
             objectFit: "cover",
             backgroundPosition: "center",
-            width: "100vw",
+            width: "100%",
             height: { xs: "200px", sm: "400px", md: "600px" },
           }}
         />
@@ -51,31 +54,42 @@ const ProjectTemplate = ({ project }: ProjectTemplateProps) => {
           </Typography>
           {!!project.link && (
             <Button onClick={() => window.open(project.link, "_blank")}>
-              <Typography variant="h5">View Project</Typography>
+              <Typography variant="h4">View Project</Typography>
             </Button>
           )}
           {!!project.videos && (
-            <Box sx={{ position: "relative" }}>
+            <Box sx={{ position: "relative", marginY: "30px" }}>
               {project.videos.map((video) =>
                 video.includes("vimeo") ? (
-                  <VimeoEmbed link={video} key={video} />
+                  <Box>
+                    <VimeoEmbed link={video} key={video} />
+                  </Box>
                 ) : null
               )}
             </Box>
           )}
 
           {!!projectImgs && (
-            <Box sx={{ marginY: "30px" }}>
-              <Typography variant="h4">Project Images</Typography>
+            <Box sx={{ marginY: "50px" }}>
+              <Typography variant="h4" mb={3}>
+                Project Images
+              </Typography>
               <ThumbnailGallery images={projectImgs} />
-              <Divider />
+              <Typography variant="subtitle1" mt={3}>
+                Click image to view
+              </Typography>
             </Box>
           )}
 
           {!!installImgs && (
-            <Box sx={{ marginY: "30px" }}>
-              <Typography variant="h4">Installation Images</Typography>
+            <Box sx={{ marginY: "50px" }}>
+              <Typography variant="h4" mb={3}>
+                Installation Images
+              </Typography>
               <ThumbnailGallery images={installImgs} />
+              <Typography variant="subtitle1" mt={3}>
+                Click image to view
+              </Typography>
             </Box>
           )}
         </Box>

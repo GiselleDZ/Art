@@ -13,6 +13,7 @@ const Home = () => {
             : "none",
         backgroundSize: "cover",
         backgroundPosition: "center",
+        minHeight: "100vh",
       }}
     />
   );

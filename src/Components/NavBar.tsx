@@ -32,8 +32,8 @@ const NavBar = ({ window }: NavBarProps) => {
   const theme = useTheme();
 
   const drawerWidth = 240;
-  const navItems = routes.map(
-    (route: RouteObject) => route.path?.slice(1) || ""
+  const navItems = routes.filter(
+    (route: RouteObject) => route.path && route.path?.length > 1
   );
 
   const handleDrawerToggle = () => {
@@ -43,6 +43,7 @@ const NavBar = ({ window }: NavBarProps) => {
   const drawer = (
     <Box
       onClick={handleDrawerToggle}
+      ml={3}
       sx={{
         textAlign: "center",
         width: "100%",
@@ -58,15 +59,15 @@ const NavBar = ({ window }: NavBarProps) => {
       <Divider />
       <List>
         {navItems.map((item) => (
-          <ListItem key={item}>
-            <Link to={`${item}`} key={item}>
+          <ListItem key={item.path}>
+            <Link to={`${item.path}`}>
               <Button
                 sx={{
                   textAlign: "center",
                   color: "#fff",
                 }}
               >
-                <Typography variant="h2">{item}</Typography>
+                <Typography variant="h2">{item.path?.slice(1)}</Typography>
               </Button>
             </Link>
           </ListItem>
@@ -113,10 +114,10 @@ const NavBar = ({ window }: NavBarProps) => {
             </Link>
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
               {navItems.map((item) => (
-                <Link to={`/${item}`} key={item}>
+                <Link to={`${item.path}`} key={item.path}>
                   <Button sx={{ color: "#fff" }}>
                     <Typography variant="h2" mr={2}>
-                      {item}
+                      {item.path?.slice(1)}
                     </Typography>
                   </Button>
                 </Link>

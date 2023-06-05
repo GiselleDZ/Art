@@ -28,7 +28,6 @@ export const nameBoxStyle = {
 
 export const BoxforThumbNails = styled(Box)`
   width: 100vw;
-  height: 100vh;
   padding: 40px;
   display: flex;
   align-items: flex-start;
@@ -46,8 +45,6 @@ export const TextIconBox = styled(Box)`
 `;
 
 export const PageBox = styled(Box)`
-  width: 100vw;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: flex-start;

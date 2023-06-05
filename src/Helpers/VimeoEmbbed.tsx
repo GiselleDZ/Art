@@ -31,7 +31,7 @@ const VimeoEmbed = ({ link }: VimeoEmbedProps) => {
   }, []);
 
   return (
-    <Box mb={3}>
+    <Box mb={6}>
       {!!iframeSrc && (
         <iframe
           src={iframeSrc}

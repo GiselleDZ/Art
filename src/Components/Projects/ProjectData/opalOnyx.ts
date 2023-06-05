@@ -16,7 +16,7 @@ const opalOnyxData: projectDataType = {
     "https://res.cloudinary.com/delu9m4xu/image/upload/v1684965270/Art-Site/OpalOnyx/opalonyxtrailerstill_mlltlo.jpg",
     "https://res.cloudinary.com/delu9m4xu/image/upload/v1684965269/Art-Site/OpalOnyx/screen_shot_2017-02-13_at_102602_am_qv947f.jpg",
     "https://res.cloudinary.com/delu9m4xu/image/upload/v1684965268/Art-Site/OpalOnyx/a002_c042_12207v0000762-02-v6-sm_eqmq1i.jpg",
-    "https://res.cloudinary.com/delu9m4xu/image/upload/v1684965276/Art-Site/OpalOnyx/opal-onyx-gif-semidesat-03_2_kolhjc.gif",
+    "Art-Site/OpalOnyx/opal-onyx-gif-semidesat-03_2_kolhjc.gif",
     "https://res.cloudinary.com/delu9m4xu/image/upload/v1684965270/Art-Site/OpalOnyx/a002_c043_1220fk0000622-03-02_copy_fug1kq.jpg",
   ],
   installPhotos: [
@@ -24,7 +24,6 @@ const opalOnyxData: projectDataType = {
   ],
   videos: [
     "https://vimeo.com/gisellezatonyl/opalonyxblackandcrimson?share=copy",
-    "https://vimeo.com/142605582?share=copy",
   ],
 };
 
