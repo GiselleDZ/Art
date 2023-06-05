@@ -81,7 +81,7 @@ const ProjectTemplate = ({ project }: ProjectTemplateProps) => {
             </Box>
           )}
 
-          {!!installImgs && (
+          {!!installImgs?.length && (
             <Box sx={{ marginY: "50px" }}>
               <Typography variant="h4" mb={3}>
                 Installation Images

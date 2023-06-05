@@ -66,7 +66,7 @@ const ThumbnailGallery = ({ images, componentCaption }: GalleryProps) => {
               sx={{ maxHeight: "90vh", maxWidth: "90vw" }}
             />
           )}
-          <Box m={6}>
+          <Box m={6} sx={{ textAlign: "center" }}>
             {isGifGallery && (
               <Typography variant="body2">{displayedImage.caption}</Typography>
             )}
