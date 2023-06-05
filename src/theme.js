@@ -217,7 +217,6 @@ const createMyTheme = (prefersDarkMode) =>
         fontFamily: "MuseoModerno, cursive",
         fontSize: 16,
         fontWeight: 700,
-        lineHeight: "100%",
         color: prefersDarkMode ? "#D1BCE3" : "#0E1116",
         fontStyle: "normal",
         marginBottom: "20px",

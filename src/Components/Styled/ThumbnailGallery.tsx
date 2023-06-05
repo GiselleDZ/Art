@@ -76,13 +76,9 @@ const ThumbnailGallery = ({ images, componentCaption }: GalleryProps) => {
       </Modal>
       <ImageList>
         {images.map((img, i) => (
-          <>
+          <Box key={img.src}>
             {img.src.includes("gif") ? (
-              <GifImage
-                image={img}
-                key={img.src}
-                setDisplayedImage={setDisplayedImage}
-              />
+              <GifImage image={img} setDisplayedImage={setDisplayedImage} />
             ) : (
               <Box
                 component="img"
@@ -92,7 +88,7 @@ const ThumbnailGallery = ({ images, componentCaption }: GalleryProps) => {
                 onClick={() => setDisplayedImage(img)}
               />
             )}
-          </>
+          </Box>
         ))}
       </ImageList>
     </Box>

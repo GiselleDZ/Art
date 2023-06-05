@@ -17,7 +17,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <NavBar />
       <Routes>
         {children.map((c) => (
-          <Route path={c.path} element={c.element} />
+          <Route path={c.path} key={c.path} element={c.element} />
         ))}
       </Routes>
     </>

@@ -61,8 +61,8 @@ const ProjectTemplate = ({ project }: ProjectTemplateProps) => {
             <Box sx={{ position: "relative", marginY: "30px" }}>
               {project.videos.map((video) =>
                 video.includes("vimeo") ? (
-                  <Box>
-                    <VimeoEmbed link={video} key={video} />
+                  <Box key={video}>
+                    <VimeoEmbed link={video} />
                   </Box>
                 ) : null
               )}
