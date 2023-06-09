@@ -100,13 +100,13 @@ const NavBar = ({ window }: NavBarProps) => {
             <Link to="/home">
               <Button>
                 <Typography
-                  variant="h1"
+                  variant="h6"
                   component="div"
                   sx={{
                     display: { xs: "none", sm: "block" },
                   }}
                 >
-                  Giselle Zatonyl
+                  gi zatonyl
                 </Typography>
               </Button>
             </Link>
@@ -114,7 +114,7 @@ const NavBar = ({ window }: NavBarProps) => {
               {navItems.map((item) => (
                 <Link to={`${item.path}`} key={item.path}>
                   <Button sx={{ color: "#fff" }}>
-                    <Typography variant="h2" mr={2}>
+                    <Typography variant="h3" mr={2}>
                       {item.path?.slice(1)}
                     </Typography>
                   </Button>

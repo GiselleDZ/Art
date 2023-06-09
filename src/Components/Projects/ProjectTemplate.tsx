@@ -39,24 +39,36 @@ const ProjectTemplate = ({ project }: ProjectTemplateProps) => {
             height: { xs: "200px", sm: "400px", md: "600px" },
           }}
         />
-        <Box sx={{ padding: "40px", textAlign: "center" }}>
-          <Button
-            onClick={() =>
-              !!project.link && window.open(project.link, "_blank")
-            }
-          >
-            <Typography variant="h1" mb={3}>
-              {project.title}
-            </Typography>
-          </Button>
-          <Typography variant="body1" mb={3} sx={{ lineHeight: "150%" }}>
-            {project.description}
-          </Typography>
-          {!!project.link && (
-            <Button onClick={() => window.open(project.link, "_blank")}>
-              <Typography variant="h4">View Project</Typography>
+        <Box
+          sx={{
+            padding: "40px",
+            textAlign: "center",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Box sx={{ maxWidth: "600px" }}>
+            <Button
+              onClick={() =>
+                !!project.link && window.open(project.link, "_blank")
+              }
+            >
+              <Typography variant="h6" mb={3}>
+                {project.title}
+              </Typography>
             </Button>
-          )}
+            <Typography variant="body1" mb={3} sx={{ lineHeight: "150%" }}>
+              {project.description}
+            </Typography>
+            {!!project.link && (
+              <Button onClick={() => window.open(project.link, "_blank")}>
+                <Typography variant="h3">View Project</Typography>
+              </Button>
+            )}
+          </Box>
           {!!project.videos && (
             <Box sx={{ position: "relative", marginY: "30px" }}>
               {project.videos.map((video) =>
@@ -71,7 +83,7 @@ const ProjectTemplate = ({ project }: ProjectTemplateProps) => {
 
           {!!projectImgs && (
             <Box sx={{ marginY: "50px" }}>
-              <Typography variant="h4" mb={3}>
+              <Typography variant="h2" mb={3}>
                 Project Images
               </Typography>
               <ThumbnailGallery images={projectImgs} />
@@ -83,7 +95,7 @@ const ProjectTemplate = ({ project }: ProjectTemplateProps) => {
 
           {!!installImgs?.length && (
             <Box sx={{ marginY: "50px" }}>
-              <Typography variant="h4" mb={3}>
+              <Typography variant="h2" mb={3}>
                 Installation Images
               </Typography>
               <ThumbnailGallery images={installImgs} />
