@@ -10,6 +10,8 @@ const initiatorFactorOneData: projectDataType = {
   videos: ["https://vimeo.com/80479482?share=copy"],
   year: 2013,
   projectPhotos: [
+    "Art-Site/purple-lazurite.gif",
+    "Art-Site/lazurite.gif",
     "https://res.cloudinary.com/delu9m4xu/image/upload/v1684965216/Art-Site/InitiatorFactorOne/screen_shot_2013-11-28_at_104822_am-front-crop_vmx1ch.jpg",
     "https://res.cloudinary.com/delu9m4xu/image/upload/v1684965217/Art-Site/InitiatorFactorOne/lazurite-initiatorfactorone-still-u10031-fr_okeb2i.png",
   ],

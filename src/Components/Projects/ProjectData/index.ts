@@ -1,5 +1,5 @@
 import alienShipData from "./alienShip";
-import cajonDePenaData from "./cajonDePena";
+// import cajonDePenaData from "./cajonDePena";
 import conductivityResistivityData from "./conductivityResistivity";
 import crudeVesselsData from "./crudeVessels";
 import discreteSystemsData from "./discreteSystems";
@@ -33,25 +33,24 @@ export type projectDataType = {
 };
 
 const projectsData = [
-  alienShipData,
-  cajonDePenaData,
+  modularLandscapesData,
   conductivityResistivityData,
+  waysOfSomethingData,
+  tundraData,
+  intangibilityData,
+  theHarmData,
+  refractionData,
+  swampData,
   crudeVesselsData,
   discreteSystemsData,
   dnsData,
   hashTagDData,
   icosaTotemsData,
   initiatorFactorOneData,
-  intangibilityData,
-  modularLandscapesData,
   opalOnyxData,
   othiData,
-  refractionData,
-  swampData,
-  theHarmData,
   theInternetData,
-  tundraData,
-  waysOfSomethingData,
+  alienShipData,
 ];
 
 export default projectsData;

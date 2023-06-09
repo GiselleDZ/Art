@@ -21,10 +21,13 @@ const Projects = () => {
                   sx={{
                     backgroundImage: `url(${r.coverImage})`,
                     backgroundSize: "cover",
-                    marginBottom: "20px",
+                    marginTop: "20px",
+                    marginBottom: "10px",
                   }}
                 />
-                <Typography variant="h3">{r.title}</Typography>
+                <Typography variant="h3" sx={{ lineHeight: "130%" }}>
+                  {r.title}
+                </Typography>
               </Box>
             </Button>
           </Link>

@@ -35,7 +35,7 @@ const GifImage = ({ image, setDisplayedImage }: GifImageProps) => {
   return (
     <ImageListItem
       key={image.caption}
-      onClick={() => setDisplayedImage(image)}
+      onClick={() => setDisplayedImage()}
       onMouseEnter={(e) => setHoveredImageValue(e, true)}
       onMouseLeave={(e) => setHoveredImageValue(e, false)}
     >

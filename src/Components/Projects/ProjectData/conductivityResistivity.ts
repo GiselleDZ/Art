@@ -5,16 +5,9 @@ const conductivityResistivityData: projectDataType = {
   title: "Conductivity Resistivity",
   coverImage:
     "https://res.cloudinary.com/delu9m4xu/image/upload/v1684452591/conductivity-resistivity/ConductivityResistivity.png",
-  description: "A 3D Art Museum featuring 3D art, right in in your broswer.",
+  description: "A 3D Art Museum featuring 3D art, right in your broswer.",
   year: 2013,
   link: "https://conductivityresistivity.art",
-  projectPhotos: [
-    "https://res.cloudinary.com/delu9m4xu/image/upload/v1684964411/Art-Site/the-wrong/stills/museum-outside.jpg",
-    "https://res.cloudinary.com/delu9m4xu/image/upload/v1684964410/Art-Site/the-wrong/stills/museum-outside-2.jpg",
-    "https://res.cloudinary.com/delu9m4xu/image/upload/v1684964409/Art-Site/the-wrong/stills/museum-outside-3.jpg",
-    "https://res.cloudinary.com/delu9m4xu/image/upload/v1684964409/Art-Site/the-wrong/stills/museum-outside-4.jpg",
-    "https://res.cloudinary.com/delu9m4xu/image/upload/v1684964408/Art-Site/the-wrong/stills/projectBanner.jpg",
-  ],
   installPhotos: [
     "https://res.cloudinary.com/delu9m4xu/image/upload/v1684964412/Art-Site/the-wrong/stills/lobby.jpg",
     "https://res.cloudinary.com/delu9m4xu/image/upload/v1684964406/Art-Site/the-wrong/stills/rachel-archibald-1.jpg",
@@ -28,6 +21,11 @@ const conductivityResistivityData: projectDataType = {
     "https://res.cloudinary.com/delu9m4xu/image/upload/v1684964406/Art-Site/the-wrong/stills/vince-mckelvie.jpg",
     "https://res.cloudinary.com/delu9m4xu/image/upload/v1684964406/Art-Site/the-wrong/stills/vince-mckelvie-2.jpg",
     "https://res.cloudinary.com/delu9m4xu/image/upload/v1684964407/Art-Site/the-wrong/stills/Katja-Novitskova.jpg",
+    "https://res.cloudinary.com/delu9m4xu/image/upload/v1684964411/Art-Site/the-wrong/stills/museum-outside.jpg",
+    "https://res.cloudinary.com/delu9m4xu/image/upload/v1684964410/Art-Site/the-wrong/stills/museum-outside-2.jpg",
+    "https://res.cloudinary.com/delu9m4xu/image/upload/v1684964409/Art-Site/the-wrong/stills/museum-outside-3.jpg",
+    "https://res.cloudinary.com/delu9m4xu/image/upload/v1684964409/Art-Site/the-wrong/stills/museum-outside-4.jpg",
+    "https://res.cloudinary.com/delu9m4xu/image/upload/v1684964408/Art-Site/the-wrong/stills/projectBanner.jpg",
   ],
   invitations: [
     "https://res.cloudinary.com/delu9m4xu/image/upload/v1684964412/Art-Site/the-wrong/stills/con-res-invite.jpg",
