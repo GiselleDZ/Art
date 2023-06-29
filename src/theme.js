@@ -11,6 +11,10 @@
  *
  */
 import { createTheme } from "@mui/material/styles";
+import JeminaExtraBoldItalic from "./fonts/jemina/Jemina-ExtraBoldItalic.woff2"
+import JeminaBlackItalic from "./fonts/jemina/Jemina-BlackItalic.woff2"
+import JeminaMediumItalic from "./fonts/jemina/Jemina-MediumItalic.woff2"
+import JeminaRegular from "./fonts/jemina/Jemina-Regular.woff2"
 
 const createMyTheme = (prefersDarkMode) =>
   createTheme({
@@ -25,6 +29,41 @@ const createMyTheme = (prefersDarkMode) =>
     },
     direction: "ltr",
     components: {
+      MuiCssBaseline: {
+        styleOverrides: 
+          `
+          @font-face {
+            font-family: Jemina;
+            font-display: swap;
+            font-style:normal;
+            src: url(${JeminaRegular});
+          };
+          
+          @font-face {
+            font-family: Jemina;
+            font-display: swap;
+            font-weight: 800;
+            font-style: italic;
+            src: url(${JeminaExtraBoldItalic});
+          };
+          
+          @font-face {
+            font-family: Jemina;
+            font-display: swap;
+            font-weight: 600;
+            font-style: italic;
+            src: url(${JeminaMediumItalic});
+          };
+          
+          @font-face {
+            font-family: Jemina;
+            font-display: swap;
+            font-weight: 900;
+            font-style: italic;
+            src: url(${JeminaBlackItalic}) format("woff2");
+          };
+          `
+      },
       MuiContainer: {
         styleOverrides: {
           root: {
@@ -190,7 +229,7 @@ const createMyTheme = (prefersDarkMode) =>
     },
     spacing: 8,
     typography: {
-      fontFamily: "Ubuntu', sans-serif",
+      fontFamily: ["Ubuntu', sans-serif", "Comfortaa, cursive", "Jemina" ].join(","),
       fontWeightLight: 300,
       fontWeightRegular: 400,
       fontWeightMedium: 500,
@@ -199,19 +238,20 @@ const createMyTheme = (prefersDarkMode) =>
       lineHeight: "120%",
       h6: {
         fontFamily: "Comfortaa, cursive",
-        fontSize: 38,
+        fontSize: 25,
         fontWeight: 300,
         lineHeight: "112%",
         color: prefersDarkMode ? "#D1BCE3" : "#0E1116",
         fontStyle: "normal",
       },
       h1: {
-        fontFamily: "Comfortaa, cursive",
-        fontSize: 32,
-        fontWeight: 700,
+        fontFamily: "Jemina",
+        fontSize:40,
+        fontWeight: 900,
+        fontStyle: "italic",
         lineHeight: "112%",
         color: prefersDarkMode ? "#D1BCE3" : "#0E1116",
-        fontStyle: "normal",
+        textDecoration: "none !important"
       },
       h2: {
         fontFamily: "Comfortaa, cursive",

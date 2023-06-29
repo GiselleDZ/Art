@@ -1,49 +1,77 @@
 :root {
   /* black */
-  --bg-primary: "#0E1116";
-  --bg-primary50: "rgb(14,17,22,.5)";
+  --bg-primary: #0E1116;
+  --bg-primary50: rgb(14,17,22,.5);
   /* dark mauve */
-  --bg-secondary: "#616283";
+  --bg-secondary: #616283;
   /* light purple */
-  --fg-primary: "#D1BCE3";
-  --fg-primary50: "rgb(209, 188, 227, .5)";
+  --fg-primary: #D1BCE3;
+  --fg-primary50: rgb(209, 188, 227, .5);
   /* bright Ube */
-  --fg-secondary: "#CB9CF2";
-  --fg-seconary50: "rgb(203, 156, 242, .5)";
+  --fg-secondary: #CB9CF2;
+  --fg-seconary50: rgb(203, 156, 242, .5);
   /* accent colors */
-  --sky50: "rgb(58,190,255, .5)";
-  --emerald: "#06D6A0";
-  --emerland50: "rbg(6,214,160, .5)";
-  --slate: "#374A67";
-  --slate50: "rbg(55,74,103,.5)";
-  --orange: "#E08E45";
-  --orange50: "rgb(224,142,69,.5)";
-  --green: "#D6FFB7";
-  --green50: "rgb(214,255,183,.5)";
-  --yellow: "#FAFF7F";
-  --yellow50: "rgb(250,255,127,.5)";
-  --indigo: "#420E6C";
-  --indigo50: "rgb(66,14,108,.5)";
-  --magenta: "#AA3E98";
-  --magenta50: "rgb(170,62,152,.5)";
+  --sky50: rgb(58,190,255, .5);
+  --emerald: #06D6A0;
+  --emerland50: rbg(6,214,160, .5);
+  --slate: #374A67;
+  --slate50: rbg(55,74,103,.5);
+  --orange: #E08E45;
+  --orange50: rgb(224,142,69,.5);
+  --green: #D6FFB7;
+  --green50: rgb(214,255,183,.5);
+  --yellow: #FAFF7F;
+  --yellow50: rgb(250,255,127,.5);
+  --indigo: #420E6C;
+  --indigo50: rgb(66,14,108,.5);
+  --magenta: #AA3E98;
+  --magenta50: rgb(170,62,152,.5);
 }
 
 @media (prefers-color-scheme: light) {
   :root {
     /* light purple */
-    --bg-primary: "#D1BCE3";
-    --bg-primary50: "rgb(209, 188, 227, .5)";
+    --bg-primary: #D1BCE3;
+    --bg-primary50: rgb(209, 188, 227, .5);
     /* bright Ube */
-    --bg-secondary: "#CB9CF2";
-    --bg-seconary50: "rgb(203, 156, 242, .5)";
+    --bg-secondary: #CB9CF2;
+    --bg-seconary50: rgb(203, 156, 242, .5);
     /* black */
-    --fg-primary: "#0E1116";
-    --fg-primary50: "rgb(14,17,22,.5)";
+    --fg-primary: #0E1116;
+    --fg-primary50: rgb(14,17,22,.5);
     /* dark mauve */
-    --fg-secondary: "#616283";
-    --fg-secondary50: "rgb(97,98,131,.5)";
+    --fg-secondary: #616283;
+    --fg-secondary50: rgb(97,98,131,.5);
   }
 }
+
+@font-face {
+  font-family: Jemina;
+  src: url(https://res.cloudinary.com/delu9m4xu/raw/upload/v1688068811/Design/Assets/Fonts/Jemina/Jemina-Regular_o0pfpq.eot);
+}
+
+@font-face {
+  font-family: Jemina;
+  font-weight: 800;
+  font-style: italic;
+  src: url(https://res.cloudinary.com/delu9m4xu/raw/upload/v1688068811/Design/Assets/Fonts/Jemina/Jemina-ExtraBoldItalic_g1w1nb.eot);
+}
+
+@font-face {
+  font-family: Jemina;
+  font-weight: 600;
+  font-style: italic;
+  src: url(https://res.cloudinary.com/delu9m4xu/raw/upload/v1688068810/Design/Assets/Fonts/Jemina/Jemina-MediumItalic_peqokd.eot);
+}
+
+@font-face {
+  font-family: Jemina;
+  font-weight: 900;
+  font-style: italic;
+  src: url(https://res.cloudinary.com/delu9m4xu/raw/upload/v1688068809/Design/Assets/Fonts/Jemina/Jemina-BlackItalic_n7f3jh.eott);
+}
+
+
 
 :root {
   width: 100%;

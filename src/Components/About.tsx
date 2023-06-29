@@ -33,7 +33,7 @@ const About = () => {
         }}
       >
         <Typography variant="h4">
-          Approved external links about me and my work:
+          More about me and my work:
         </Typography>
 
         <List>

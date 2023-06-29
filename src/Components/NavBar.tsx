@@ -41,10 +41,11 @@ const NavBar = ({ window }: NavBarProps) => {
   const drawer = (
     <Box
       onClick={handleDrawerToggle}
-      ml={3}
+      pl={3}
       sx={{
         textAlign: "center",
         width: "100%",
+        height: "100%",
         textDecoration: "none",
         display: "flex",
         flexDirection: "column",
@@ -52,21 +53,15 @@ const NavBar = ({ window }: NavBarProps) => {
       }}
     >
       <Typography variant="h1" sx={{ my: 2 }}>
-        G Z
+        g z
       </Typography>
       <Divider />
       <List>
         {navItems.map((item) => (
           <ListItem key={item.path}>
-            <Link to={`${item.path}`}>
-              <Button
-                sx={{
-                  textAlign: "center",
-                  color: "#fff",
-                }}
-              >
+            <Link to={`${item.path}`} style={{textDecoration: "none"}}>
                 <Typography variant="h2">{item.path?.slice(1)}</Typography>
-              </Button>
+             
             </Link>
           </ListItem>
         ))}
@@ -81,14 +76,11 @@ const NavBar = ({ window }: NavBarProps) => {
     <Box>
       <AppBar>
         <Toolbar>
-          <IconButton
-            aria-label="Open drawer"
-            edge="start"
+            <MenuIcon  aria-label="Open drawer"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" } }}
-          >
-            <MenuIcon />
-          </IconButton>
+            sx={{mr: 2, display: { sm: "none" }, 
+            color: theme.palette.mode === "dark" ? "#D1BCE3" : "#0E1116", }}
+            />
           <Box
             sx={{
               display: { xs: "none", sm: "flex" },
@@ -97,27 +89,22 @@ const NavBar = ({ window }: NavBarProps) => {
               width: "100%",
             }}
           >
-            <Link to="/home">
-              <Button>
+            <Link to="/home" style={{textDecoration: "none"}}>
                 <Typography
-                  variant="h6"
-                  component="div"
+                  variant="h1"
                   sx={{
                     display: { xs: "none", sm: "block" },
                   }}
                 >
-                  gi zatonyl
+                  g zatonyl
                 </Typography>
-              </Button>
             </Link>
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
               {navItems.map((item) => (
-                <Link to={`${item.path}`} key={item.path}>
-                  <Button sx={{ color: "#fff" }}>
+                <Link to={`${item.path}`} key={item.path} style={{textDecoration: "none"}}>
                     <Typography variant="h3" mr={2}>
                       {item.path?.slice(1)}
                     </Typography>
-                  </Button>
                 </Link>
               ))}
             </Box>
@@ -138,6 +125,7 @@ const NavBar = ({ window }: NavBarProps) => {
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: drawerWidth,
+              opaciy: 1,
               backgroundColor:
                 theme.palette.mode === "dark" ? "#0E1116" : "#D1BCE3",
             },
