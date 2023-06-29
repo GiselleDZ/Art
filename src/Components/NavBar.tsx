@@ -60,7 +60,7 @@ const NavBar = ({ window }: NavBarProps) => {
         {navItems.map((item) => (
           <ListItem key={item.path}>
             <Link to={`${item.path}`} style={{textDecoration: "none"}}>
-                <Typography variant="h2">{item.path?.slice(1)}</Typography>
+                <Typography variant="h3">{item.path?.slice(1)}</Typography>
              
             </Link>
           </ListItem>
@@ -99,7 +99,7 @@ const NavBar = ({ window }: NavBarProps) => {
                   g zatonyl
                 </Typography>
             </Link>
-            <Box sx={{ display: { xs: "none", sm: "block" } }}>
+            <Box sx={{ display: { xs: "none", sm: "flex" }, flexDirection: "row" }}>
               {navItems.map((item) => (
                 <Link to={`${item.path}`} key={item.path} style={{textDecoration: "none"}}>
                     <Typography variant="h3" mr={2}>
@@ -125,9 +125,9 @@ const NavBar = ({ window }: NavBarProps) => {
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: drawerWidth,
-              opaciy: 1,
-              backgroundColor:
-                theme.palette.mode === "dark" ? "#0E1116" : "#D1BCE3",
+              // opaciy: 1,
+              // backgroundColor:
+              //   theme.palette.mode === "dark" ? "#0E1116" : "#D1BCE3",
             },
           }}
         >
