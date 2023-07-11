@@ -1,10 +1,8 @@
 import {
   AppBar,
   Box,
-  Button,
   Divider,
   Drawer,
-  IconButton,
   List,
   ListItem,
   Toolbar,
@@ -16,15 +14,8 @@ import { useState } from "react";
 import { Link, RouteObject } from "react-router-dom";
 import routes from "../Router/routes";
 
-interface NavBarProps {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
-  window?: () => Window;
-}
 
-const NavBar = ({ window }: NavBarProps) => {
+const NavBar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const theme = useTheme();
@@ -70,7 +61,7 @@ const NavBar = ({ window }: NavBarProps) => {
   );
 
   const container =
-    window !== undefined ? () => window().document.body : undefined;
+    window !== undefined ? () => window.document.body : undefined;
 
   return (
     <Box>

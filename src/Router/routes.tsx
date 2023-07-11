@@ -1,7 +1,5 @@
 import GifGallery from "../Components/GifGallery";
 import Home from "../Components/Home";
-import BubbleAnimation from "../Components/Animations/BubbleAnimation";
-import WebsitePieces from "../Components/WebsitePieces";
 import About from "../Components/About";
 import Projects from "../Components/Projects";
 import projectsData from "../Components/Projects/ProjectData";
@@ -18,16 +16,16 @@ export const projectRoutes = projectsData.map((project) => ({
 
 const routes: RouteObject[] = [
   {
-    path: "/",
+    path: "*",
+    element: <Home />,
+  },
+  {
+    path: "/home",
     element: <Home />,
   },
   {
     path: "/gifs",
     element: <GifGallery />,
-  },
-  {
-    path: "/home",
-    element: <Home />,
   },
   {
     path: projectsPath,
@@ -42,15 +40,6 @@ const routes: RouteObject[] = [
     path: "*",
     element: <ErrorBoundary />,
   },
-  // {
-  //   path: "/sites/bubble",
-  //   element: BubbleAnimation as React.FC,
-  // },
-  // {
-  //     path: "/",
-  //     // element: <Home />,
-  //     errorElement: <ErrorPage />,
-  //   },
 ];
 
 export default routes;
