@@ -1,4 +1,21 @@
 export const gifImages = [
+    // LIBIDINAL, 2019
+    {
+      src: "Art-Site/Gifs/Dyson-Bidet-10fps_ercbxv.gif",
+      caption: "Dyson Bidet, 2019",
+    },
+    {
+      src: "Art-Site/Gifs/TechnoSpa-500pxw50websnap_meqocr.gif",
+      caption: "Techno Spa Tunnel, 2018",
+    },
+    {
+      src: "Art-Site/Gifs/RippleMaze-500px-5fps_txsvp2.gif",
+      caption: "Ripple Maze, 2019",
+    },
+    {
+      src: "Art-Site/Gifs/aoto-spiral-500pw-5fps-112colors_rmxvhf.gif",
+      caption: "Aoo Spiral, 2016",
+    },
   // MODULAR LANDSCAPES, 2016
   {
     src: "Art-Site/lavastorm.gif",

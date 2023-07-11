@@ -1,6 +1,6 @@
 const aboutText = [
-  "I'm G, an artist, and programmer dedicated to exploring and disrupting our perceived reality.",
-  "My work often distorts bodies and space to dissect the human experience. I use multiple mediums, from browser and 3D graphics, to sculpture and installation, to challenge perceptions and unveil unseen connections. Through my work, I aim to communicate openly using our visual language to illustrate narratives that speak to our human experiences. I strive to build worlds that mirror our own, beautiful and flawed."
+  "I am G, an artistic innovator and accomplished programmer, deeply committed to exploring and challenging our conventional perceptions of reality. My work invites a profound inquiry into the nature of bodies and spatial relationships to delve into the essence of the human experience.",
+  "Leveraging a diverse spectrum of mediums — from the abstract expanse of browser-based and 3D graphics to the tangible presence of sculpture and immersive installations — I push the boundaries of perception. My work uncovers the unseen threads interweaving our shared reality, turning art into a compelling visual conversation. Through the power of imagery, I strive to share narratives deeply entrenched in our collective human journey.","I aim to build alternate worlds that serve as reflective surfaces to our existence, embodying its inherent beauty and contradictory imperfections. Through this creative endeavor, I not only challenge our established comprehension of the world but also propose fresh, engaging perspectives for its appreciation and understanding. In this way, I hope to open avenues for discourse and create new lenses through which we can experience and interpret our world."
 ];
 
 export default aboutText;

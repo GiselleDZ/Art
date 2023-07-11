@@ -37,53 +37,63 @@ const About = () => {
         </Typography>
 
         <List>
-          <ListItem>
-            <Button
+          <ListItem
+              sx={{cursor: "pointer"}}
               onClick={() =>
                 window.open("https://dev.gisellezatonyl.com", "_blank")
               }
-            >
+          >
+        
+          
               <Typography variant="h3">Programming Portfolio</Typography>
-            </Button>
+          
           </ListItem>
-          <ListItem>
-            <Button
+          <ListItem
+            sx={{cursor: "pointer"}}
               onClick={() =>
                 window.open("https://vimeo.com/gisellezatonyl", "_blank")
               }
-            >
+          >
+        
+          
               <Typography variant="h3">Vimeo</Typography>
-            </Button>
+          
           </ListItem>
-          <ListItem>
-            <Button
+          <ListItem
+            sx={{cursor: "pointer"}}
               onClick={() =>
                 window.open("https://twitter.com/GiselleZatonyl", "_blank")
               }
-            >
+          >
+        
+          
               <Typography variant="h3">Twitter</Typography>
-            </Button>
+          
           </ListItem>
-          <ListItem>
-            <Button
+          <ListItem
+            sx={{cursor: "pointer"}}
               onClick={() =>
                 window.open("https://www.instagram.com/libidinal_/", "_blank")
               }
-            >
+          >
+        
+          
               <Typography variant="h3">3D Art Instagram </Typography>
-            </Button>
+          
           </ListItem>
-          <ListItem>
-            <Button
+          <ListItem
+            sx={{cursor: "pointer"}}
               onClick={() =>
                 window.open(
                   "https://www.instagram.com/chromatic_black/",
                   "_blank"
-                )
-              }
-            >
+                  )
+                }
+          >
+        
+          
               <Typography variant="h3">Personal Instaram</Typography>
-            </Button>
+          
           </ListItem>
         </List>
       </Box>

@@ -8,8 +8,8 @@ const Projects = () => {
     <PageBox sx={{ paddingY: "12vh", height: "100%", width: "100%" }}>
       <BoxforThumbNails>
         {projectsData.map((r) => (
-          <Link to={`${window.location}/${r.path}`} key={r.path}>
-            <Button>
+          <Link to={`${window.location}/${r.path}`} key={r.path} style={{textDecoration: "none"}}>
+       
               <Box
                 sx={{
                   width: "200px",
@@ -29,7 +29,6 @@ const Projects = () => {
                   {r.title}
                 </Typography>
               </Box>
-            </Button>
           </Link>
         ))}
       </BoxforThumbNails>
